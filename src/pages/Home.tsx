@@ -1,7 +1,10 @@
+import React, {Component} from "react"
+import * as C from './styles';
+
 export function Home () {
     return (
-        <div>
-            <h1>Hello world </h1>
-        </div>
+        <C.Section>
+               
+        </C.Section>
     )
 }
