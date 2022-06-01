@@ -42,4 +42,69 @@ export const FormBox = styled.div`
   display: flex;
   flex-direction: column;
   padding: 49px;
+
+  h1 {
+    text-align: center;
+    margin: 40px 0 20px 0;
+  }
 `;
+
+export const ButtonLogin = styled.button `
+color: #fff;
+background-color: #0069FF;
+width: 100%;
+height: 50px;
+border-radius: 6px;
+cursor: pointer;
+transition-duration: 0.3s;
+
+
+:hover {
+background-color: #4085E7;
+}
+`;
+
+export const ButtonSignup = styled.button `
+color: #fff;
+background-color: #0069FF;
+width: 100%;
+height: 50px;
+border-radius: 6px;
+cursor: pointer;
+transition-duration: 0.3s;
+
+:hover {
+background-color: #4085E7;
+}
+`;
+
+export const InputLogin = styled.input`
+color: #fff;
+padding-left: 30px;
+background-color: transparent;
+width: 100%;
+height: 50px;
+border: 1px solid #FFFFFF;
+border-radius: 6px;
+::placeholder {
+  color: #C4C4C4;
+}
+
+`;
+
+export const InputPassword = styled.input `
+color: #fff;
+padding-left: 30px;
+background-color: transparent;
+width: 100%;
+height: 50px;
+border: 1px solid #FFFFFF;
+border-radius: 6px;
+::placeholder {
+  color: #C4C4C4;
+}
+
+
+`
+
+
