@@ -1,4 +1,5 @@
 import React, { Component, useState } from "react";
+import { Link } from "react-router-dom";
 import * as C from "./styles";
 
 export function Home() {
@@ -32,7 +33,9 @@ export function Home() {
           <C.ButtonLogin onClick={handleLogin}>Fazer login</C.ButtonLogin>
 
           <p>Não tem uma conta? Crie agora!</p>
-          <C.ButtonSignup>Registrar uma conta</C.ButtonSignup>
+          <Link to ={'/signup'}>
+            <C.ButtonSignup>Registrar uma conta</C.ButtonSignup>
+          </Link>
         </C.FormBox>
       </C.CenterBox>
     </C.Section>
