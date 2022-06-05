@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { CustomInput } from "../../components";
+import { signin } from "../../services/auth";
 
 interface FormData {
   email: string;
@@ -25,12 +26,9 @@ export function Home() {
   });
 
   const handleLogin = (data: FormData) => {
-    console.log(data);
-    // const res = [email, password];
-    // console.log(res);
-    // setEmail("");
-    // setPassword("");
+    signin(data);
   };
+  
   return (
     <C.Section>
       <C.CenterBox>
