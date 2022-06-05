@@ -50,66 +50,32 @@ export const FormBox = styled.div`
   }
 `;
 
-export const ButtonLogin = styled.button `
-font-size: 15px;
-color: #fff;
-background-color: #0069FF;
-width: 100%;
-height: 50px;
-border-radius: 6px;
-cursor: pointer;
-transition-duration: 0.3s;
+export const ButtonLogin = styled.button`
+  font-size: 15px;
+  color: #fff;
+  background-color: #0069ff;
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition-duration: 0.3s;
 
-
-:hover {
-background-color: #4085E7;
-}
+  :hover {
+    background-color: #4085e7;
+  }
 `;
 
-export const ButtonSignup = styled.button `
-font-size: 15px;
-color: #fff;
-background-color: #0069FF;
-width: 100%;
-height: 50px;
-border-radius: 6px;
-cursor: pointer;
-transition-duration: 0.3s;
+export const ButtonSignup = styled.button`
+  font-size: 15px;
+  color: #fff;
+  background-color: #0069ff;
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition-duration: 0.3s;
 
-:hover {
-background-color: #4085E7;
-}
+  :hover {
+    background-color: #4085e7;
+  }
 `;
-
-export const InputLogin = styled.input`
-font-size: 15px;
-color: #fff;
-padding-left: 30px;
-background-color: transparent;
-width: 100%;
-height: 50px;
-border: 1px solid #FFFFFF;
-border-radius: 6px;
-::placeholder {
-  color: #7F8C8D;
-}
-
-`;
-
-export const InputPassword = styled.input `
-font-size: 15px;
-color: #fff;
-padding-left: 30px;
-background-color: transparent;
-width: 100%;
-height: 50px;
-border: 1px solid #FFFFFF;
-border-radius: 6px;
-::placeholder {
-  color: #7F8C8D;
-}
-
-
-`
-
-

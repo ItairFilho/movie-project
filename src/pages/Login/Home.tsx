@@ -1,39 +1,61 @@
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
 import * as C from "./styles";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { CustomInput } from "../../components";
+
+interface FormData {
+  email: string;
+  password: string;
+}
 
 export function Home() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const schema = yup.object({
+    email: yup.string().email("Email inválido").required("Campo obrigatório"),
+    password: yup.string().required("Campo obrigatório"),
+  });
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: yupResolver(schema),
+  });
 
-  const handleLogin = () => {
-
-    const res = [email, password]
-    console.log(res)
-    setEmail('')
-    setPassword('')
-    
-  } 
+  const handleLogin = (data: FormData) => {
+    console.log(data);
+    // const res = [email, password];
+    // console.log(res);
+    // setEmail("");
+    // setPassword("");
+  };
   return (
     <C.Section>
       <C.CenterBox>
         <C.Title>The Cinelist</C.Title>
         <C.FormBox>
           <h1>Faça o login</h1>
-          <C.InputLogin type={"text"}
-           placeholder="Insira seu email..." 
-           value={email}
-           onChange={(e) => setEmail(e.target.value)}
-           required />
-          <C.InputPassword type={"password"}
-           placeholder="Insira sua senha..."
-           value={password}
-           onChange={(e) => setPassword(e.target.value)}
-            required/>
-          <C.ButtonLogin onClick={handleLogin}>Fazer login</C.ButtonLogin>
+          <CustomInput
+            name="email"
+            control={control}
+            placeholder="Insira seu email..."
+            required
+          />
+          <CustomInput
+            name="password"
+            control={control}
+            type={"password"}
+            placeholder="Insira sua senha..."
+            required
+          />
+          <C.ButtonLogin onClick={handleSubmit(handleLogin)}>
+            Fazer login
+          </C.ButtonLogin>
 
           <p>Não tem uma conta? Crie agora!</p>
-          <Link to ={'/signup'}>
+          <Link to={"/signup"}>
             <C.ButtonSignup>Registrar uma conta</C.ButtonSignup>
           </Link>
         </C.FormBox>

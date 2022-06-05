@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes as DomRoutes } from "react-router-dom";
 import { Home } from "../pages/Login/Home";
-import SignUp from "../pages/signUp/Signup";
+import SignUp from "../pages/SignUp/Signup";
 
 export function Routes() {
   return (
