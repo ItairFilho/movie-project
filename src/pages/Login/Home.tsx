@@ -23,12 +23,12 @@ export function Home() {
           <C.InputLogin type={"text"}
            placeholder="Insira seu email..." 
            value={email}
-           onChange={(e) => [setEmail(e.target.value)]}
+           onChange={(e) => setEmail(e.target.value)}
            required />
           <C.InputPassword type={"password"}
            placeholder="Insira sua senha..."
            value={password}
-           onChange={(e) => [setPassword(e.target.value)]}
+           onChange={(e) => setPassword(e.target.value)}
             required/>
           <C.ButtonLogin onClick={handleLogin}>Fazer login</C.ButtonLogin>
 

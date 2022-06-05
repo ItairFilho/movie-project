@@ -27,22 +27,22 @@ export function SignUp () {
             <C.InputSignup type={"text"}
                 placeholder="Insira seu email..."
                 value={email} 
-                onChange = {(e) => [setEmail(e.target.value)]}
+                onChange = {(e) => setEmail(e.target.value)}
                 required />
            <C.InputSignup type={"text"}
                 placeholder="Confirme seu email..."
                 value={emailConf}
-                onChange={(e) => [setEmailConf(e.target.value)]} 
+                onChange={(e) => setEmailConf(e.target.value)} 
                 required />
           <C.InputPassword type={"password"}
                 placeholder="Insira sua senha..."
                 value={password}
-                onChange={(e) => [setPassword(e.target.value)]}
+                onChange={(e) => setPassword(e.target.value)}
                 required/>
            <C.InputPassword type={"password"}
                 placeholder="Confirme sua senha..."
                 value={passwordConf}
-                onChange = {(e) => [setPassWordConf(e.target.value)]}
+                onChange = {(e) => setPassWordConf(e.target.value)}
                 required/>
             <C.ButtonSignup onClick={handleSignUp}>Registrar-se</C.ButtonSignup>
         
